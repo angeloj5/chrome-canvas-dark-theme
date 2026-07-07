@@ -23,7 +23,17 @@ const CSS = `
   }
 
   button {
-    background-color: #2a2a2a !important;
+    background-color: #000000 !important;
+  }
+
+  .Button {
+    background: #1e1e1e !important;
+    border-color: #1e1e1e !important;
+  }
+
+  .status {
+    background: #1e1e1e !important;
+    color: #e8e8e8 !important;
   }
 
   /* Links */
