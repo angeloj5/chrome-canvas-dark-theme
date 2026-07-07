@@ -5,25 +5,25 @@ const CSS = `
     color-scheme: dark !important;
   }
 
-  /* Universal dark base — covers every element including custom ones,
-     avoiding inheritance-chain gaps that let light backgrounds leak through */
-  *, *::before, *::after {
+  html, body {
     background-color: #121212 !important;
     color: #e8e8e8 !important;
-    border-color: #333 !important;
-    outline-color: #555 !important;
   }
 
-  /* Restore transparency for media and void elements */
-  img, video, canvas, svg, picture, iframe,
-  br, hr, wbr {
-    background-color: transparent !important;
-  }
-
-  /* Images and video look natural at slightly reduced brightness */
-  img, video {
+  /* Invert images and videos back so they look natural */
+  img, video, canvas, svg image, picture {
     filter: brightness(0.9) !important;
-    color: transparent !important;
+  }
+
+  /* Inputs and form elements */
+  input, textarea, select, button {
+    background-color: #1e1e1e !important;
+    color: #e8e8e8 !important;
+    border-color: #444 !important;
+  }
+
+  button {
+    background-color: #2a2a2a !important;
   }
 
   /* Links */
@@ -35,21 +35,15 @@ const CSS = `
     color: #c58af9 !important;
   }
 
-  /* Inputs */
-  input, textarea, select {
-    background-color: #1e1e1e !important;
-    border-color: #444 !important;
-  }
-
-  /* Buttons and button-like elements (including <a role="button">) */
-  button,
-  [role="button"],
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"] {
-    background-color: #2a2a2a !important;
-    color: #e8e8e8 !important;
-    border-color: #555 !important;
+  /* Common container elements */
+  div, section, article, aside, header, footer, main, nav,
+  table, thead, tbody, tr, th, td,
+  ul, ol, li,
+  h1, h2, h3, h4, h5, h6,
+  p, span, label, blockquote, pre, code {
+    background-color: inherit !important;
+    color: inherit !important;
+    border-color: #333 !important;
   }
 
   /* Scrollbars */
@@ -60,6 +54,25 @@ const CSS = `
   ::-webkit-scrollbar-thumb {
     background-color: #444 !important;
     border-radius: 4px !important;
+  }
+
+  /* Override white/light backgrounds explicitly set inline or by class */
+  [style*="background: white"],
+  [style*="background-color: white"],
+  [style*="background: #fff"],
+  [style*="background-color: #fff"],
+  [style*="background: #ffffff"],
+  [style*="background-color: #ffffff"] {
+    background-color: #1a1a1a !important;
+    color: #e8e8e8 !important;
+  }
+
+  /* Shadows / cards */
+  [class*="card"], [class*="panel"], [class*="modal"], [class*="dialog"],
+  [class*="dropdown"], [class*="menu"], [class*="tooltip"] {
+    background-color: #1e1e1e !important;
+    color: #e8e8e8 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6) !important;
   }
 
   /* iframes get their own injection via the content script re-running */
