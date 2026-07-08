@@ -6,7 +6,7 @@ const CSS = `
   }
 
   html, body {
-    background-color: #121212 !important;
+    background-color: #1e1e1e !important;
     color: #e8e8e8 !important;
   }
 
@@ -22,8 +22,13 @@ const CSS = `
     border-color: #1e1e1e !important;
   }
 
-  button {
-    background-color: #000000 !important;
+  button, btn {
+    background-color: #1e1e1e !important;
+  }
+
+  .button-sidebar-wide {
+    background: #1e1e1e !important;
+    border-color: #1e1e1e !important;
   }
 
   .Button {
