@@ -19,7 +19,7 @@ const CSS = `
   input, textarea, select, button {
     background-color: #1e1e1e !important;
     color: #e8e8e8 !important;
-    border-color: #444 !important;
+    border-color: #1e1e1e !important;
   }
 
   button {
@@ -31,18 +31,38 @@ const CSS = `
     border-color: #1e1e1e !important;
   }
 
+  .toggle_comments_link {
+    border-color: #1e1e1e !important;
+  }
+
+  .toggle_rubric_assessments_link {
+    border-color: #1e1e1e !important;
+  }
+
+  .toggle_score_details_link {
+    border-color: #1e1e1e !important;
+  }
+
   .status {
     background: #1e1e1e !important;
     color: #e8e8e8 !important;
   }
 
+  .grade {
+    border-width: 0px
+  }
+
+  .show_guess_grades_link {
+    background-color: #1e1e1e !important;
+  }
+
   /* Links */
   a {
-    color: #8ab4f8 !important;
+    color: #37ff00ff !important;
   }
 
   a:visited {
-    color: #c58af9 !important;
+    color: #e3ffb5ff !important;
   }
 
   /* Common container elements */
@@ -53,7 +73,7 @@ const CSS = `
   p, span, label, blockquote, pre, code {
     background-color: inherit !important;
     color: inherit !important;
-    border-color: #333 !important;
+    border-color: #1e1e1e !important;
   }
 
   /* Scrollbars */
@@ -82,7 +102,6 @@ const CSS = `
   [class*="dropdown"], [class*="menu"], [class*="tooltip"] {
     background-color: #1e1e1e !important;
     color: #e8e8e8 !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.6) !important;
   }
 
   /* iframes get their own injection via the content script re-running */
